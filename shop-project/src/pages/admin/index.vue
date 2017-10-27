@@ -1,36 +1,35 @@
 <template>
-  <el-row>
+  <el-row class="tac">
     <el-col :span="6">
-        <el-menu  default-active="2" class="el-menu-vertical-demo" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
-                <router-link to="/admin">
-                 <el-menu-item index="1">
-                  View Products
-                  </el-menu-item>
-                  </router-link>
-              </el-submenu>
-              <el-menu-item index="2">
-                <i class="el-icon-menu"></i>
-                <router-link to="/admin/new">New Product</router-link>
-              </el-menu-item>
+        <el-menu  default-active="2"  class="el-menu-vertical-demo">
+                <router-link to="/admin">  <el-menu-item index="1"> <i class="el-icon-view"></i>View Products</el-menu-item> </router-link>
+                <router-link to="/admin/new"><el-menu-item index="2"><i class="el-icon-news"></i>New Product </el-menu-item></router-link>
+                <router-link to="/admin/edit/:id"><el-menu-item index="3"><i class="el-icon-edit"></i>Edit Product</el-menu-item></router-link>
+          
           </el-menu>
     </el-col>
     <el-col :span="18">
        <router-view></router-view>
     </el-col>
-</el-row>
+  </el-row>
 
 </template>
 
 <script>
 export default {
-  name: 'home',
-  data () {
+  name: "home",
+  data() {
     return {
-      msg: 'Welcome to Your Admin',
-
-    }
-  },
-
-}
+      msg: "Welcome to Your Admin"
+    };
+  }
+};
 </script>
-<style scoped><style>
+<style scoped>
+router-link-active {
+  text-decoration: none;
+  color: #000;
+}
+
+</style>
+

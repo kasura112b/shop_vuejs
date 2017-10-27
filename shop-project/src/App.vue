@@ -2,10 +2,10 @@
 
   <div id="app">
     <div id="menu">
-      <el-menu class="el-menu-demo" mode="horizontal">
-      <el-menu-item index="1"><router-link to="/">Home</router-link></el-menu-item>
-      <el-menu-item index="2"><router-link to="/admin">Admin</router-link></el-menu-item>
-      <el-menu-item index="3"><router-link to="/cart">Cart</router-link></el-menu-item>
+      <el-menu class="el-menu-demo" mode="horizontal" active-text-color="#409eff"> 
+      <router-link to="/"><el-menu-item index="1"><i class="el-icon-d-caret"></i> Home</el-menu-item></router-link>
+      <router-link to="/admin"><el-menu-item index="2"><i class="el-icon-tickets"></i>Admin</el-menu-item></router-link>
+      <router-link to="/cart"><el-menu-item index="3"><i class="el-icon-goods"></i>Cart</el-menu-item></router-link>
       </el-menu>
     </div>
     <router-view/>
@@ -27,7 +27,7 @@ export default {
   padding:0;
   margin:0;
 }
-ul>li>a {
+  a {
     text-decoration: none;
 }
 </style>
