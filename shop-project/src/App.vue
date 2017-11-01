@@ -29,5 +29,15 @@ export default {
 }
   a {
     text-decoration: none;
-}
+  }
+  .ruleForm{
+    margin-top: 50px;
+  }
+  .el-form-item__content{
+    text-align: left;
+  }
+  #textarea {
+    height: 95px;
+    resize: none;
+  }
 </style>

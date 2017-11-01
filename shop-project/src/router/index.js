@@ -16,12 +16,10 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'Home',
       component: Home
     },
     {
       path: '/admin',
-      name: 'Admin',
       //Parent Component
       component: Index,
       //Children Component
