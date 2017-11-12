@@ -1,19 +1,19 @@
 
 <<template>
 <el-row class="product">
-  <el-col :span="8" v-for="(o, index) in 2" :key="o" :offset="index > 0 ? 3 : 3">
+  <el-col :span="8" v-for="(o, index) in 6" :key="o" :offset="index > 0 ? 3 : 3">
     <el-card class="product-item" :body-style="{ padding: '0px' }">
-      <img src="/static/bonsai.jpg" class="image">
       <div class="details">
-                <el-button type="success" icon="el-icon-edit"></el-button>
-                <el-button type="danger" icon="el-icon-delete"></el-button>
-                <el-button type="primary" icon="el-icon-share">Details Product</el-button>
-       </div>
+          <el-button type="success" icon="el-icon-edit"></el-button>
+          <el-button type="danger" icon="el-icon-delete"></el-button>
+          <el-button type="primary" icon="el-icon-share">Details Product</el-button>
+      </div>
+      <img src="/static/bonsai.jpg" class="image"/>
       <div style="padding: 14px;">
-         <p class="name">Apple Mini Bonsai</p>
+         <h4 class="name-product">Apple Mini Bonsai</h4>
         <div class="bottom clearfix">
-           <p class="name">Price:<span class="price">200$</span></p>
-          <el-button type="text" class="button">Operating button</el-button>
+           <p class="name_price">Price:<span class="price">200$</span></p>
+          <el-button type="text" icon="el-icon-goods" class="button">Add Cart </el-button>
         </div>
       </div>
     </el-card>
@@ -25,7 +25,11 @@
 .product{
     margin: 50px;
 }
+.product-item{
+  margin: 20px;
+}
   .bottom {
+    border-top: 1px solid #eee;
     margin-top: 13px;
     line-height: 12px;
   }
@@ -34,13 +38,17 @@
     padding: 0;
     float: right;
   }
-    .name{
+    .name-product{
+    color: #3c4858;
     padding: 0px;
     font-size: 20px;
     margin: 0px 0px 5px 0px;
     }
+    .name_price{
+      font-size: 20px;
+    }
     .price {
-      color:gold;
+      color:darkgoldenrod;
     }
   .image {
     z-index: 3;
@@ -59,8 +67,7 @@
   .details{
     display: block;
     position: absolute;
-    top: 0;
-    margin: 30px 82px;
+    margin: 30px 40px 10px 63px;
   }
 
   .clearfix:before,
