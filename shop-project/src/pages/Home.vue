@@ -1,5 +1,5 @@
-<template>
-  <div>
+<template v-for="item in products">
+  <div >
   <product-list></product-list>
   </div>
 </template>
